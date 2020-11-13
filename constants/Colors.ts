@@ -1,5 +1,5 @@
 const tintColorLight = '#2f95dc';
-const tintColorDark = '#fff';
+const tintColorDark = '#067d0a'; // Spotify color change.
 
 export default {
   light: {
