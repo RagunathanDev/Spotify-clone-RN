@@ -16,6 +16,7 @@ import HomeScreen from "../screens/HomeScreen";
 import SearchScreen from "../screens/SearchScreen";
 import LibraryScreen from "../screens/LibraryScreen";
 import PremiumeScreen from "../screens/PremiumeScreen";
+import AlbumScreen from "../screens/AlbumScreen";
 import {
   BottomTabParamList,
   HomeParamList,
@@ -116,6 +117,11 @@ function HomeNavigator() {
             alignSelf: "center",
           },
         }}
+      />
+      <HomeStack.Screen
+        name='AlbumScreen'
+        component={AlbumScreen}
+        options={{ headerTitle: "Album" }}
       />
     </HomeStack.Navigator>
   );
