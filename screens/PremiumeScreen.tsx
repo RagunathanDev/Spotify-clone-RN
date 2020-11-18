@@ -1,11 +1,19 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Image, Dimensions } from "react-native";
 import { Text, View } from "../components/Themed";
+
+const { width, height } = Dimensions.get("window");
 
 const PremiumeScreen = () => {
   return (
     <View>
-      <Text>PremiumeScreen</Text>
+      <Image
+        source={{
+          uri:
+            "https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-download-logo-30.png",
+        }}
+        style={{ width: width - 30, height: 400 }}
+      />
     </View>
   );
 };

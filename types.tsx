@@ -25,3 +25,12 @@ export type LibraryParamList = {
 export type PremiumeParamList = {
   PremiumeScreen: undefined;
 };
+
+//Album types
+export type Album = {
+  id: string;
+  imageUri: string;
+  artistsHeadline: string;
+};
+
+//AlbumCategory
