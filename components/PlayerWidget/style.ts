@@ -5,7 +5,8 @@ const { width, height } = Dimensions.get("screen");
 const styles = StyleSheet.create({
     Container: {
         flexDirection: "row",
-        flex: 1
+        position: "absolute",
+        bottom: 48
     },
     SongImage: {
         width: width * 0.15,
@@ -33,6 +34,7 @@ const styles = StyleSheet.create({
         justifyContent: "flex-end",
         alignItems: "center",
         paddingRight: 20,
+
     }
 
 })

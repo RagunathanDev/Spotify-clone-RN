@@ -3,15 +3,17 @@ import { Image } from "react-native";
 import { Text, View } from "../Themed";
 import styles from "./style";
 import { Song } from "../../types";
-import { Entypo } from "@expo/vector-icons";
+import { Entypo, Ionicons, AntDesign } from "@expo/vector-icons";
 
-export type songListItemProp = {
-  song: Song;
+const song = {
+  id: "1",
+  imageUri:
+    "https://cache.boston.com/resize/bonzai-fba/Globe_Photo/2011/04/14/1302796985_4480/539w.jpg",
+  title: "High on You",
+  artist: "Helen",
 };
 
-const SongListItem = (props: songListItemProp) => {
-  const { song } = props;
-
+const PlayerWidget = () => {
   return (
     <View style={styles.Container}>
       <Image style={styles.SongImage} source={{ uri: song.imageUri }} />
@@ -20,10 +22,16 @@ const SongListItem = (props: songListItemProp) => {
         <Text style={styles.Songartist}>{song.artist}</Text>
       </View>
       <View style={styles.threeDot}>
-        <Entypo name='dots-three-vertical' size={24} color='white' />
+        <Ionicons
+          name='ios-heart-empty'
+          size={28}
+          color='white'
+          style={{ marginHorizontal: 20 }}
+        />
+        <AntDesign name='play' size={32} color='green' />
       </View>
     </View>
   );
 };
 
-export default SongListItem;
+export default PlayerWidget;

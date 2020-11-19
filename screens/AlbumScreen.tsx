@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, FlatList } from "react-native";
 import { Text, View } from "../components/Themed";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import albumDetails from "../data/albumDetails";
 import SongListItem from "../components/SongListItem";
 import { SongList } from "../types";
+import AlbumHeader from "../components/AlbumHeader";
 
 export type SongListProp = {
   songList: SongList;
@@ -13,6 +14,7 @@ export type SongListProp = {
 const AlbumScreen = (props: SongListProp) => {
   const { songList } = props;
   const route = useRoute();
+  const { play, setPlay }: any = useState(false);
 
   //Fetching previous screen props data.
   React.useEffect(() => {
@@ -27,6 +29,7 @@ const AlbumScreen = (props: SongListProp) => {
         renderItem={({ item }) => <SongListItem song={item} />}
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
+        ListHeaderComponent={() => <AlbumHeader album={albumDetails} />}
       />
     </View>
   );
