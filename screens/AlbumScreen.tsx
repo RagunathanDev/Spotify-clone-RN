@@ -1,18 +1,33 @@
 import React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, FlatList } from "react-native";
 import { Text, View } from "../components/Themed";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import albumDetails from "../data/albumDetails";
+import SongListItem from "../components/SongListItem";
+import { SongList } from "../types";
 
-const AlbumScreen = () => {
+export type SongListProp = {
+  songList: SongList;
+};
+
+const AlbumScreen = (props: SongListProp) => {
+  const { songList } = props;
   const route = useRoute();
 
+  //Fetching previous screen props data.
   React.useEffect(() => {
     console.log(route);
   }, []);
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Hello from AlbumScreen</Text>
+    <View style={{ justifyContent: "center" }}>
+      {/* <SongListItem song={albumDetails.songs[0]} /> */}
+      <FlatList
+        data={albumDetails.songs}
+        renderItem={({ item }) => <SongListItem song={item} />}
+        keyExtractor={(item) => item.id}
+        showsVerticalScrollIndicator={false}
+      />
     </View>
   );
 };

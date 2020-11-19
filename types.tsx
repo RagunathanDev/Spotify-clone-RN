@@ -34,4 +34,21 @@ export type Album = {
   artistsHeadline: string;
 };
 
-//AlbumCategory
+//Song Item
+export type Song = {
+  id: string;
+  imageUri: string;
+  title: string;
+  artist: string;
+};
+
+//SongList for Screen
+export type SongList = {
+  id: string;
+  name: string;
+  by: string;
+  numberOfLikes: Number;
+  imageUri: string;
+  artistsHeadline: string;
+  songs: Song[];
+};
