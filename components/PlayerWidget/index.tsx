@@ -23,11 +23,11 @@ const PlayerWidget = () => {
         <TouchableOpacity
           style={{
             marginHorizontal: 10,
-            top: 22,
             flex: 0.3,
             width: 1,
             height: 0.01,
             backgroundColor: "white",
+            top: 18,
           }}
         />
         <Text style={styles.Songartist}>{song.artist}</Text>

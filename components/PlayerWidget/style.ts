@@ -7,17 +7,15 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         position: "absolute",
         bottom: 48,
-        borderTopWidth: 1,
-        borderRightWidth: 1,
-        borderLeftWidth: 1,
-        borderColor: "#53c25b",
+        borderWidth: 0.5,
+        borderColor: "#deffe3",
         borderRadius: 10,
     },
     SongImage: {
         width: width * 0.10,
         height: width * 0.10,
-        margin: 10,
-        borderRadius: width * 0.15
+        margin: 5,
+        borderRadius: width
     },
     NameList: {
         flexDirection: "row",
