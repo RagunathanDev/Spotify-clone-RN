@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   HeaderImage: {
     width: width / 2,
     height: width / 2,
-    borderRadius: width / 2,
+    //borderRadius: width / 2,
     margin: 15,
   },
   albumName: {

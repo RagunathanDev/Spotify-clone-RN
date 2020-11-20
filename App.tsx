@@ -6,6 +6,7 @@ import useCachedResources from "./hooks/useCachedResources";
 import useColorScheme from "./hooks/useColorScheme";
 import Navigation from "./navigation";
 import PlayerWidget from "./components/PlayerWidget";
+import { View } from "./components/Themed";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();

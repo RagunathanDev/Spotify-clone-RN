@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     },
     album__image: {
         width: "100%",
-        height: width / 2,
+        height: width * 0.30,
         borderRadius: 10
     },
     album__artistName: {

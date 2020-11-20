@@ -1,9 +1,10 @@
 import React from "react";
-import { Image } from "react-native";
+import { Image, TouchableHighlight } from "react-native";
 import { Text, View } from "../Themed";
 import styles from "./style";
 import { Song } from "../../types";
 import { Entypo, Ionicons, AntDesign } from "@expo/vector-icons";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const song = {
   id: "1",
@@ -15,10 +16,20 @@ const song = {
 
 const PlayerWidget = () => {
   return (
-    <View style={styles.Container}>
+    <View style={[styles.Container]}>
       <Image style={styles.SongImage} source={{ uri: song.imageUri }} />
       <View style={styles.NameList}>
         <Text style={styles.Songtitle}>{song.title}</Text>
+        <TouchableOpacity
+          style={{
+            marginHorizontal: 10,
+            top: 22,
+            flex: 0.3,
+            width: 1,
+            height: 0.01,
+            backgroundColor: "white",
+          }}
+        />
         <Text style={styles.Songartist}>{song.artist}</Text>
       </View>
       <View style={styles.threeDot}>

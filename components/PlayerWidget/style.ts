@@ -6,27 +6,34 @@ const styles = StyleSheet.create({
     Container: {
         flexDirection: "row",
         position: "absolute",
-        bottom: 48
+        bottom: 48,
+        borderTopWidth: 1,
+        borderRightWidth: 1,
+        borderLeftWidth: 1,
+        borderColor: "#53c25b",
+        borderRadius: 10,
     },
     SongImage: {
-        width: width * 0.15,
-        height: width * 0.15,
+        width: width * 0.10,
+        height: width * 0.10,
         margin: 10,
         borderRadius: width * 0.15
     },
     NameList: {
+        flexDirection: "row",
         justifyContent: "center",
-        marginLeft: 5
+        marginLeft: 5,
+
     },
     Songtitle: {
         color: Colors.dark.tabIconSelected,
         fontWeight: "bold",
         fontSize: 18,
-        paddingBottom: 5,
-
+        alignSelf: "center"
     },
     Songartist: {
 
+        alignSelf: "center"
     },
     threeDot: {
         flex: 1,
